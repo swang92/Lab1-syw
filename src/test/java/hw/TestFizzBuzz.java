@@ -21,51 +21,42 @@ public class TestFizzBuzz {
         fixture = null;
     }
 
-    @Test
+    String [] methodOutput = {"This need to be an positive integer > 0"};
 
-    public void testNull() {
-        assertNull(fixture.fizzBuzz(-10));
+    @Test
+    public void testNegativeTen(){
+        assertArrayEquals(methodOutput, fixture.fizzBuzzArray(-10));
     }
-//
-//    @Ignore
-//    @Test (expected = NumberFormatException.class)
-//    public void testNegativeTen() {
-    //        assertNull(fixture.fizzBuzz(-10));
-//    }
-//
-//    @Ignore
-//    @Test (expected = IllegalArgumentException.class)
-//    public void testNegativeOne(){
-//        assertNull(fixture.fizzBuzz(-1));
-//    }
-//
-//    @Ignore
-//    @Test
-//    public void testZero(){
-//        assertNull(fixture.fizzBuzz(0));
-//    }
-//
-//    @Ignore
-//    @Test
-//    public void testPostiveOne(){
-//        String [] methodOutput = {"1"};
-//        assertArrayEquals(fixture.fizzBuzz(1),methodOutput);
-//    }
-//
-//    @Ignore
-//    @Test
-//    public void testPositiveSeven(){
-//        String [] methodOutput = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7"};
-//        assertArrayEquals(fixture.fizzBuzz(7),methodOutput);
-//    }
-//
-//    @Ignore
-//    @Test
-//    public void testPositiveSeventeen(){
-//        String [] methodOutput = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz",
-//        "13", "14", "Fizz Buzz", "16", "17" };
-//        assertArrayEquals(fixture.fizzBuzz(17),methodOutput);
-//    }
+
+    @Test
+    public void testNegativeOne(){
+        assertArrayEquals(methodOutput, fixture.fizzBuzzArray(-1));
+    }
+
+    @Test
+    public void testZero(){
+        assertArrayEquals(methodOutput, fixture.fizzBuzzArray(0));
+    }
+
+
+   @Test
+    public void testPositiveOne(){
+        String [] output = {"1"};
+        assertArrayEquals(output, fixture.fizzBuzzArray(1));
+            }
+
+    @Test
+    public void testPositiveSeven(){
+        String [] output = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7"};
+        assertArrayEquals(output, fixture.fizzBuzzArray(7));
+    }
+
+    @Test
+    public void testPositiveSeventeen(){
+        String [] output = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz",
+        "13", "14", "Fizz Buzz", "16", "17" };
+        assertArrayEquals(output, fixture.fizzBuzzArray(17));
+    }
 
 
 

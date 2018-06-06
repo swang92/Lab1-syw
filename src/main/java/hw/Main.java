@@ -1,5 +1,7 @@
 package hw;
 
+import java.util.Arrays;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -9,25 +11,31 @@ public class Main {
       try {
         max = Integer.parseInt(args[0]);
       } catch (NumberFormatException e) {
-        System.out.println("The argument entered must be an integer");
+        System.out.println("The argument entered must be integer");
         System.exit(1);
       }
-    }
 
-    for (int x = 1; x < max+1; x++) {
-      if (x % 3 == 0 && x % 5 == 0) {
-        System.out.println("Fizz Buzz");
-      } else if (x % 3 == 0) {
-        System.out.println("Fizz");
-      } else if (x % 5 == 0) {
-        System.out.println("Buzz");
-      } else {
-        System.out.println(x);
+      if (max <= 0) {
+        try {
+          throw new NegativeArraySizeException();
+        } catch (NegativeArraySizeException e) {
+          System.out.println("The argument entered must be integer greater than 0");
+          System.exit(1);
+        }
       }
-    }
-  }
 
-  }
+       String[] fizzBuzzArray = FizzBuzz.fizzBuzzArray(max);
+
+       System.out.println(Arrays.toString(fizzBuzzArray));}
+
+       }
+
+    }
+
+
+
+
+
 
 
 
