@@ -1,6 +1,8 @@
  package hw;
 
 import static org.junit.Assert.*;
+import java.util.List;
+import java.util.Arrays;
 
 import org.junit.After;
 import org.junit.Before;
@@ -21,41 +23,42 @@ public class TestFizzBuzz {
         fixture = null;
     }
 
-    String [] methodOutput = {"This need to be an positive integer > 0"};
+
+    List<String> actual = Arrays.asList("This need to be an positive integer > 0");
 
     @Test
     public void testNegativeTen(){
-        assertArrayEquals(methodOutput, fixture.fizzBuzzArray(-10));
+        assertEquals(actual, fixture.fizzBuzzList(-10));
     }
 
     @Test
     public void testNegativeOne(){
-        assertArrayEquals(methodOutput, fixture.fizzBuzzArray(-1));
+        assertEquals(actual, fixture.fizzBuzzList(-1));
     }
 
     @Test
     public void testZero(){
-        assertArrayEquals(methodOutput, fixture.fizzBuzzArray(0));
+        assertEquals(actual, fixture.fizzBuzzList(0));
     }
 
 
    @Test
     public void testPositiveOne(){
-        String [] output = {"1"};
-        assertArrayEquals(output, fixture.fizzBuzzArray(1));
+       List<String> output = Arrays.asList("1");
+       assertEquals(output, fixture.fizzBuzzList(1));
             }
 
     @Test
     public void testPositiveSeven(){
-        String [] output = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7"};
-        assertArrayEquals(output, fixture.fizzBuzzArray(7));
+        List<String> output = Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7");
+        assertEquals(output, fixture.fizzBuzzList(7));
     }
 
     @Test
     public void testPositiveSeventeen(){
-        String [] output = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz",
-        "13", "14", "Fizz Buzz", "16", "17" };
-        assertArrayEquals(output, fixture.fizzBuzzArray(17));
+        List<String> output = Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz",
+        "13", "14", "Fizz Buzz", "16", "17");
+        assertEquals(output, fixture.fizzBuzzList(17));
     }
 
 

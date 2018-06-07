@@ -1,34 +1,37 @@
 package hw;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+
 public class FizzBuzz {
 
-    public static String[] fizzBuzzArray(final int n) {
+    public static List<String> fizzBuzzList(final int n) {
 
         int arrayIndex = 0;
-        String[] myArray;
+        List<String> myList;
 
         if (n <= 0) {
-            myArray = new String[1];
-            myArray[0] = "This need to be an positive integer > 0";
+            myList = new ArrayList<>(Arrays.asList("This need to be an positive integer > 0"));
         }
         else {
-            myArray = new String[n];
+            myList = new ArrayList<>(n);
             if (n > 0) {
                 for (int x = 1; x <= n; x++, arrayIndex++) {
                     if (x % 3 == 0 && x % 5 == 0) {
-                        myArray[arrayIndex] = ("Fizz Buzz");
+                        myList.add("Fizz Buzz");
                     } else if (x % 3 == 0) {
-                        myArray[arrayIndex] = ("Fizz");
+                        myList.add("Fizz");
                     } else if (x % 5 == 0) {
-                        myArray[arrayIndex] = ("Buzz");
+                        myList.add("Buzz");
                     } else {
-                        myArray[arrayIndex] = (String.valueOf(x));
+                        myList.add(String.valueOf(x));
                     }
                 }
             }
 
         }
-        return myArray;
+        return myList;
     }
 }
 

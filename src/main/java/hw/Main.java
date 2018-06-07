@@ -1,6 +1,6 @@
 package hw;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -24,13 +24,13 @@ public class Main {
         }
       }
 
-       String[] fizzBuzzArray = FizzBuzz.fizzBuzzArray(max);
+      List<String> fizzBuzzList = FizzBuzz.fizzBuzzList(max);
 
-       System.out.println(Arrays.toString(fizzBuzzArray));}
-
-       }
+      System.out.println(fizzBuzzList);
 
     }
+  }
+}
 
 
 
