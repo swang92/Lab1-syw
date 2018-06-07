@@ -60,7 +60,4 @@ public class TestFizzBuzz {
         "13", "14", "Fizz Buzz", "16", "17");
         assertEquals(output, fixture.fizzBuzzList(17));
     }
-
-
-
 }
