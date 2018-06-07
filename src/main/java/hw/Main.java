@@ -17,8 +17,8 @@ public class Main {
 
       if (max <= 0) {
         try {
-          throw new NegativeArraySizeException();
-        } catch (NegativeArraySizeException e) {
+          throw new IllegalArgumentException();
+        } catch (IllegalArgumentException e) {
           System.out.println("The argument entered must be integer greater than 0");
           System.exit(1);
         }
